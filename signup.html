@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<HTML>
+<title>
+    login form
+</title>
+<head>
+    <style>
+ 
+body
+{
+text-align: center;
+background: url("https://wallpapercave.com/wp/wp3857882.png") 0px 0px no-repeat;
+background-size:cover;
+background-attachment: fixed;
+}
+
+.header {
+text-align: center;
+padding-bottom:50px;
+}
+
+.header h3 {
+font-size:200px;
+color: #fff;
+letter-spacing:4px;
+}
+
+.design-w3l{
+width:36%;
+margin:0 auto;
+}
+
+.mail-form-agile {
+    padding: 50px 40px;
+    text-align: center;
+    margin:0px;
+    background: rgba(23, 218, 218, 0.18);
+    color: #000;
+	margin:0 auto;
+}
+
+.padding {
+margin: 5px 0 5px;
+}
+.mail-form-agile input[type="text"], .mail-form-agile input[type="password"], .mail-form-agile input[type="number"] {
+padding: 13px 10px;
+width: 92.5%;
+font-size: 16px;
+outline: none;
+background:transparent;
+border:0px;
+border-bottom: 1px solid #fff;
+border-radius: 0px;
+font-family: "Asap-Regular";
+letter-spacing:1.6px;
+color:#fff;
+}
+::-webkit-input-placeholder{
+   color:#b4b0b0 !important;
+   font-weight:400;
+}
+.mail-form-agile input[type="submit"]{
+font-size: 18px;
+padding: 10px 20px;
+letter-spacing:1.2px;
+border: none;
+text-transform: capitalize;
+outline: none;
+border-radius: 4px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+background: #D65B88;
+color: #fff;
+cursor: pointer;
+margin: 0 auto;
+font-family: "Asap-Regular";
+-webkit-transition-duration: 0.9s;
+transition-duration: 0.9s;
+}
+.mail-form-agile input[type="submit"]:hover {
+ -webkit-transition-duration: 0.9s;
+ transition-duration: 0.9s;
+ background:rgba(91, 157, 214, 0.76);
+}
+
+.footer{
+text-align: center;
+padding-top:75px;
+letter-spacing:1.6px;
+line-height:22px;
+}
+.footer p {
+font-size: 16px;
+color: #fff;
+margin: 0px;
+letter-spacing:1.4px;
+}
+
+
+/*-- responsive media queries --*/
+
+/*login box size*/
+@media screen and (max-width:1440px){
+.design-w3l {
+    width: 40%;
+    
+}
+.header h3 img{
+width:6.5%;
+position: absolute;
+bottom: 550px;
+right: 1150px;
+}
+}
+
+.header h3 {
+    font-size: 45px;
+}
+.mail-form-agile {
+    padding: 35px 30px;
+}
+.mail-form-agile input[type="text"], .mail-form-agile input[type="password"] , .mail-form-agile input[type="number"] {
+    font-size: 14px ;
+}
+.mail-form-agile input[type="submit"] {
+    font-size: 16px;
+}
+.footer p {
+    font-size: 14px;
+}
+
+@media screen and (max-width:868px){
+    .padding-all {
+    padding: 200px 200px;
+}
+}
+
+body {
+  margin: 0;
+  padding-top: 44px;
+  padding-bottom: 73px;
+}
+
+</style>
+</head>
+<body>
+    
+    <div class="padding-all">
+        <div class="header">
+            <h3> 
+                <img src="https://logo-logos.com/wp-content/uploads/2018/03/pubg.png" alt="" >
+                    SIGN UP
+            </h3>
+        </div>
+        <div class="design-w3l">
+            <div class="mail-form-agile">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Enter username" required="">
+                    <input class="padding" type="number" name="number" placeholder="Enter Phone-number" required="">
+                    <input id="email" name="email" placeholder="Enter your E-mail" required="" type="text" />
+                    <input class="padding" type="password" name="password" placeholder="Enter password" required="">
+                    <input class="padding" type="password" name="password" placeholder="Repeat password" required="">
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+            <div class="clear">   
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                © 2020  PUBG Login form. All Rights Reserved | Design by JD GOHIL
+            </p>
+        </div>
+    </div>
+</body>
+</HTML>
