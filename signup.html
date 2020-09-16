@@ -1,6 +1,138 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+        
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      
+      }
+
+      .full-screen{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .full-screen video{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      /*Login button effect*/
+      .btn {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  transition: 0.2s;
+  text-align: center; 
+  }
+
+
+    .btn:hover {
+      color: var(--secondary-color);
+      background: var(--primary-color);
+      box-shadow: 0 0 20px var(--primary-color), 0 0 80px var(--primary-color),
+        0 0 160px var(--primary-color), 0 0 320px var(--primary-color);
+      transition-delay: 1s;
+    }    
+      .btn span {
+        position: absolute;
+        display: block;
+      }
+      .btn span:nth-child(1) {
+        top: 0;
+        transform: translateX(-115%);
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, transparent, var(--primary-color));
+      }
+      .btn:hover span:nth-child(1) {
+        transform: translateX(100%);
+        transition: 1s;
+      }
+      .btn span:nth-child(3) {
+        bottom: 0;
+        transform: translateX(100%);
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(270deg, transparent, var(--primary-color));
+      }
+      .btn:hover span:nth-child(3) {
+        transform: translateX(-115%);
+        transition: 1s 0.5s;
+      }
+      .btn span:nth-child(2) {
+        right: 0;
+        transform: translateY(-130%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, var(--primary-color));
+      }
+      .btn:hover span:nth-child(2) {
+        transform: translateY(100%);
+        transition: 1s 0.25s;
+      }
+      .btn span:nth-child(4) {
+        left: 0;
+        transform: translateY(100%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, var(--primary-color));
+      }
+      .btn:hover span:nth-child(4) {
+        transform: translateY(-130%);
+        transition: 1s 0.75s;
+      }
+
+
+      @media (max-width:768px) {
+         
+       
+        .body{
+          margin-right: 100px;
+        }
+     
+      .form{
+      left: 20px;
+    }
+      .mobsignup{
+        margin-right: 200px;
+        margin-left: 0px;
+      }
+
+      div.jdsignup{ 
+       right: 100px;
+      left:30px;
+      }
+     .row{
+       margin-top: 10px;
+       margin-bottom: 0px;
+     }
+    .form.button.btn{
+      left: 0px;
+    }
+    .full-screen{
+     width: fit-content;
+ }
+    }
+  </style>
+
     <title>sign up</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +143,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">PUBG MOBILE</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,34 +176,47 @@
           </div>
         </div>
       </nav>
-    <div class="container my-5">
+      <div class="full-screen"> 
+        <div>
+          <video src="C:\Users\JAGDISH\Documents\GitHub\krupesh138.github.io\krupesh138.github.io\video.mp4" autoplay loop muted></video>
+        </div>
+    </div>
+    <div class="container my-5 mobsignup"style="margin-right:90px>
         <div class="row">
-            <div class="col-10 col-md-8 mx-auto">
+            <div class="col-10 col-md-8 mx-auto jdsignup">
                 <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                      
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <input type="password" class="form-control" id="exampleInputPassword1" required>
                     </div>
-                    <div>
-                        <select class="form-select form-select-sm mb-3"  aria-label=".form-select-sm example">
-                            <option selected>Select State</option>
+                    <div class="mb-3">
+                        <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" required>
+                            <option selected disabled value="">Select State</option>
                             <option value="1">Gujrat</option>
                             <option value="2">Punjab</option>
                             <option value="3">Maharashtra</option>
                           </select>
+                          
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" required>
                         <label class="form-check-label" for="flexCheckDefault">
                             Agree to terms and conditions
                         </label>
                       </div>
-                    <a href="https://krupesh138.github.io/login.html" button type="submit" class="btn btn-primary">Sign Up</button></a>
+                      <button class="btn" type="submit" style="left:50px">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        SignUp
+                      </button>
+                      
                 </form>
             </div>
             <div class="mx-auto mt-5">
